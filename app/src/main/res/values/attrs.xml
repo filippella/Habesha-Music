@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HMTextView">
+        <attr name="custom_text_font_style" format="enum">
+            <enum name="uicFontLight" value="0" />
+            <enum name="uicFontRegular" value="1" />
+            <enum name="uicFontSemibold" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
