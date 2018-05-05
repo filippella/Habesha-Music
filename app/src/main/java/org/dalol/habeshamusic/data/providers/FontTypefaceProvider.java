@@ -15,7 +15,7 @@ import java.util.Map;
 
 public final class FontTypefaceProvider implements UIFont {
 
-    private final Map<Integer, Typeface> mFontTypefaceMap;
+    private final Map<String, Typeface> mFontTypefaceMap;
 
     private FontTypefaceProvider() {
         mFontTypefaceMap = new HashMap<>();
@@ -29,25 +29,12 @@ public final class FontTypefaceProvider implements UIFont {
         return InstanceHolder.INSTANCE;
     }
 
-    public Typeface getTypeface(Integer fontType) {
-        Typeface typeface = mFontTypefaceMap.get(fontType);
+    public Typeface getTypeface(String fontName) {
+        Typeface typeface = mFontTypefaceMap.get(fontName);
         if (typeface == null) {
             Context context = HMApplication.getApplicationInstance();
-
-            String fontName;
-            switch (fontType) {
-                case 0:
-                    fontName = FONT_PATH_LIGHT;
-                    break;
-                case 1:
-                    fontName = FONT_PATH_MEDIUM;
-                    break;
-                default:
-                    fontName = FONT_PATH_BOLD;
-            }
-
             typeface = Typeface.createFromAsset(context.getAssets(), fontName);
-            mFontTypefaceMap.put(fontType, typeface);
+            mFontTypefaceMap.put(fontName, typeface);
         }
         return typeface;
     }

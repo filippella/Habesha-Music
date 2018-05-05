@@ -23,17 +23,22 @@ import android.view.View;
 public class GridItemsMarginDecorator extends RecyclerView.ItemDecoration {
 
     private final int mSpaceSize;
-    private final int mSpanCount;
+    private GridLayoutManager mGridLayoutManager;
+    private int mSpanCount;
 
-    public GridItemsMarginDecorator(int spaceSize, int spanCount) {
+    public GridItemsMarginDecorator(int spaceSize) {
         mSpaceSize = spaceSize;
-        mSpanCount = spanCount;
     }
 
     @Override
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         super.getItemOffsets(outRect, view, parent, state);
         int position = parent.getChildAdapterPosition(view);
+
+        if (mGridLayoutManager == null) {
+            mGridLayoutManager = (GridLayoutManager) parent.getLayoutManager();
+            mSpanCount = mGridLayoutManager.getSpanCount();
+        }
 
         if (position < mSpanCount) {
             outRect.top = mSpaceSize;

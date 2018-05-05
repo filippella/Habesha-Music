@@ -5,6 +5,9 @@ import android.content.Context;
 import android.content.IntentFilter;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
+
+import org.dalol.habeshamusic.R;
 import org.dalol.habeshamusic.common.NetworkChangeReceiver;
 
 /**
@@ -20,6 +23,7 @@ public class HMApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
+        MobileAds.initialize(this, getString(R.string.admob_app_id));
         registerReceiver(mChangeReceiver = new NetworkChangeReceiver(), new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
     }
 

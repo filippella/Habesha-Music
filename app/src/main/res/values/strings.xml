@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Habesha Music</string>
+
+    <string name="openDrawer">Open</string>
+    <string name="closeDrawer">Close</string>
+    <string name="admob_app_id">ca-app-pub-5489846298805329~6437187824</string>
+    <string name="admob_banner_ad_unit_id">ca-app-pub-5489846298805329/2119255599</string>
 </resources>

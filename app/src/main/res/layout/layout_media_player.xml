@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/lock_screen_bg"
+    android:background="@color/playerBg"
     android:focusableInTouchMode="true"
     android:orientation="vertical">
 
@@ -46,13 +46,14 @@
                 android:singleLine="true"
                 android:text="Singer name veryveryverlong"
                 android:textSize="14sp"
-                app:custom_text_font_style="uicFontSemibold" />
+                app:hm_text_font_style="@string/font_family_corbert_regular" />
 
             <org.dalol.habeshamusic.ui.widgets.HMTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorWhite"
-                android:text="Singer name"
+                android:text="ጥላሁን ገሰሰ"
+                app:hm_text_font_style="@string/font_family_corbert_regular"
                 android:textSize="12sp" />
 
 
@@ -62,7 +63,7 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground"
+            android:foreground="?android:attr/selectableItemBackground"
             android:padding="8dp"
             android:tint="@color/colorWhite"
             app:srcCompat="@drawable/ic_skip_previous_black_24dp" />
@@ -73,7 +74,7 @@
             android:layout_height="36dp"
             android:clickable="true"
             android:tint="@color/colorWhite"
-            android:foreground="?attr/selectableItemBackground"
+            android:foreground="?android:attr/selectableItemBackground"
             android:padding="5dp"
             app:srcCompat="@drawable/ic_play_arrow_black_24dp" />
 
@@ -82,7 +83,7 @@
             android:layout_height="36dp"
             android:clickable="true"
             android:tint="@color/colorWhite"
-            android:foreground="?attr/selectableItemBackground"
+            android:foreground="?android:attr/selectableItemBackground"
             android:padding="8dp"
             app:srcCompat="@drawable/ic_skip_next_black_24dp" />
 
@@ -90,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground"
+            android:foreground="?android:attr/selectableItemBackground"
             android:padding="6dp"
             android:tint="@color/colorWhite"
             app:srcCompat="@drawable/ic_more_vert_black_24dp" />
@@ -109,12 +110,13 @@
         android:paddingTop="4dp">
 
         <org.dalol.habeshamusic.ui.widgets.HMTextView
+            android:id="@+id/text_elapsed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5:06"
             android:textSize="14sp"
             android:textColor="@color/colorWhite"
-            app:custom_text_font_style="uicFontLight" />
+            app:hm_text_font_style="@string/font_family_corbert_regular"  />
 
 
         <android.support.v7.widget.AppCompatSeekBar
@@ -126,19 +128,20 @@
             android:textColor="@color/colorWhite"
             android:layout_weight="1"
             android:indeterminateOnly="false"
-            android:maxHeight="3.5dp"
+            android:maxHeight="3dp"
             android:padding="0dp"
             android:progressDrawable="@drawable/player_slider_bg"
             android:splitTrack="false"
             android:thumb="@drawable/player_slider_thumb" />
 
         <org.dalol.habeshamusic.ui.widgets.HMTextView
+            android:id="@+id/text_duration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="7:13"
             android:textSize="14sp"
             android:textColor="@color/colorWhite"
-            app:custom_text_font_style="uicFontLight" />
+            app:hm_text_font_style="@string/font_family_corbert_regular"  />
 
     </LinearLayout>
 

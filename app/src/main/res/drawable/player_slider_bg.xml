@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
-            <solid android:color="@color/music5seekBg" />
+            <solid android:color="#c3c3c3" />
         </shape>
     </item>
 
@@ -11,7 +11,7 @@
             android:clipOrientation="horizontal"
             android:gravity="left">
             <shape android:shape="rectangle">
-                <solid android:color="@color/colorBlue" />
+                <solid android:color="#636363" />
             </shape>
         </clip>
     </item>
@@ -20,7 +20,7 @@
             android:clipOrientation="horizontal"
             android:gravity="left">
             <shape android:shape="rectangle">
-                <solid android:color="@color/colorAccent" />
+                <solid android:color="#F55A2E" />
             </shape>
         </clip>
     </item>

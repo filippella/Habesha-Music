@@ -37,7 +37,7 @@ public class MusicDashboardActivity extends AppCompatActivity {
         genreList.setHasFixedSize(true);
         genreList.setLayoutManager(new GridLayoutManager(this, SPAN_COUNT));
         int size = getResources().getDimensionPixelSize(R.dimen.dimen_genre_item_margin);
-        genreList.addItemDecoration(new GridItemsMarginDecorator(size, SPAN_COUNT));
+        genreList.addItemDecoration(new GridItemsMarginDecorator(size));
 
         List<String> imageSources = new LinkedList<>();
         imageSources.add("http://www.huluzefen.com/assets/images/genres/Newest-Playlists.jpg");

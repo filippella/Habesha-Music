@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@null</item>
     </style>
 
     <style name="PlayerSeekbar" parent="@style/Widget.AppCompat.SeekBar">
@@ -13,6 +14,14 @@
         <item name="android:indeterminateOnly">false</item>
         <item name="android:progressDrawable">@drawable/player_slider_bg</item>
         <item name="android:thumb">@drawable/player_slider_thumb</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
 </resources>

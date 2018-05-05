@@ -36,7 +36,7 @@ public class HMTextView extends AppCompatTextView {
         TypedArray attr = context.obtainStyledAttributes(attrs, R.styleable.HMTextView, 0, 0);
         if (attr != null) {
             try {
-                int fontStyle = attr.getInt(R.styleable.HMTextView_custom_text_font_style, 0);
+                String fontStyle = attr.getString(R.styleable.HMTextView_hm_text_font_style);
                 setTypeface(FontTypefaceProvider.getInstance().getTypeface(fontStyle));
             } finally {
                 attr.recycle();
